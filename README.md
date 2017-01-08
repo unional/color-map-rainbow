@@ -8,6 +8,8 @@
 Create rainbow of colors with minimal dependency.
 Size < 15 k not minimized.
 
+Inspired from [`color-rainbow`](https://github.com/grant/color-rainbow)
+
 ## `createRainbow(shades)`
 
 ```ts
