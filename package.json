@@ -1,5 +1,5 @@
 {
-  "name": "rainbow-color",
+  "name": "color-map-rainbow",
   "description": "Create rainbow of colors",
   "version": "2.0.0",
   "main": "dist/commonjs/index.js",
