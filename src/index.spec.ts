@@ -1,9 +1,9 @@
 import test from 'ava'
 import * as style from 'ansi-styles'
-import { create } from './index'
+import { createRainbow } from './index'
 
 test('create rainbow', t => {
-  let actual = create(30)
+  let actual = createRainbow(30)
   const rainbow = actual.reduce((v, c) => {
     return v + style.bgColor.ansi16m.rgb(...c) + ' ' + style.bgColor.close
   }, '')
@@ -11,9 +11,9 @@ test('create rainbow', t => {
 })
 
 test('catch negative input', t => {
-  t.throws(() => create(-1))
+  t.throws(() => createRainbow(-1))
 })
 
 test('create no rainbow for 0', t => {
-  t.deepEqual(create(0), [])
+  t.deepEqual(createRainbow(0), [])
 })
