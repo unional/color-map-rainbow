@@ -1,6 +1,6 @@
 import { createColorsFromMap, ColorMap, RGB, Alpha } from 'color-map'
 
-const rainbow: ColorMap = [
+export const rainbow: ColorMap = [
   { index: 0, rgb: [150, 0, 90] },
   { index: 0.125, rgb: [0, 0, 200] },
   { index: 0.25, rgb: [0, 25, 255] },
