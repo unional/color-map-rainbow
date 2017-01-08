@@ -6,7 +6,25 @@
 [![Coverage Status][coveralls-image]][coveralls-url]
 
 Create rainbow of colors with minimal dependency.
-Size < 12 k not minimized
+Size < 12 k not minimized.
+
+## `createRainbow(shades)`
+
+```ts
+import { createRainbow } from 'rainbow-color'
+import { rgbHex, rgbaString } from 'color-map'
+
+// rainbow = array of [r,g,b,a=1]
+const rainbow = createRainbow(72)
+
+// transparentRainbow = array of [r,g,b, 0...0.8]
+const transparentRainbow = createRainbow(72, [0, 0.8])
+
+// use `color-map` conversion function to get
+// '#000000' or 'rgba(...)`
+const hexRainbow = rainbow.map(c => rgbHex(c))
+const rgbaRainbow = rainbow.map(c => rgbaString(c))
+```
 
 ## Contribute
 
