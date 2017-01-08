@@ -64,5 +64,8 @@
     "tslint": "^4.3.1",
     "tslint-config-unional": "^0.6.0",
     "typescript": "^2.1.4"
+  },
+  "dependencies": {
+    "color-map": "^0.2.1"
   }
 }

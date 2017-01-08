@@ -5,7 +5,8 @@
 [![Build status][travis-image]][travis-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
 
-Create rainbow of colors with no dependency.
+Create rainbow of colors with minimal dependency.
+Size < 12 k not minimized
 
 ## Contribute
 
