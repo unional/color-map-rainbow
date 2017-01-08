@@ -1,7 +1,7 @@
 {
   "name": "color-map-rainbow",
   "description": "Create rainbow of colors",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/commonjs/index.js",
   "typings": "dist/commonjs/index.d.ts",
   "files": [
