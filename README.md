@@ -6,7 +6,7 @@
 [![Coverage Status][coveralls-image]][coveralls-url]
 
 Create rainbow of colors with minimal dependency.
-Size < 12 k not minimized.
+Size < 15 k not minimized.
 
 ## `createRainbow(shades)`
 
