@@ -1,6 +1,6 @@
 import test from 'ava'
 import * as style from 'ansi-styles'
-import { create, toHex } from './index'
+import { create } from './index'
 
 test('create rainbow', t => {
   let actual = create(30)

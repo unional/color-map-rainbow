@@ -1,8 +1,9 @@
-import { getRGB } from './getRGB'
+import { getRGB, Color } from './getRGB'
 
 // `toHex()` is small enough to justify to keep in the library.
 // It slightly violates SRP.
 export * from './toHex'
+export { Color }
 
 /**
  * Create rainbow of colors
@@ -13,7 +14,7 @@ export function create(numberOfColors: number) {
     throw new Error('Number of colors must be non-negative')
   }
 
-  let rainbow: Array<[number, number, number]> = []
+  let rainbow: Color[] = []
   for (let i = 0; i < numberOfColors; ++i) {
     rainbow.push(getRGB(i / numberOfColors))
   }

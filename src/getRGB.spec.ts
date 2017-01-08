@@ -1,32 +1,12 @@
 import test from 'ava'
 
-import { toHex } from './toHex'
-import { getRGB } from './getRGB'
+import { getRGB, Color } from './getRGB'
 
 test('getRGBColor', t => {
-  let a: string[] = []
+  let a: Color[] = []
   for (let i = 0; i <= 1; i += 0.05) {
-    a.push(toHex(getRGB(i)))
+    a.push(getRGB(i))
   }
 
-  t.deepEqual(a, ['#ff0000',
-    '#ff4d00',
-    '#ff9900',
-    '#ffe600',
-    '#ccff00',
-    '#7fff00',
-    '#33ff00',
-    '#00ff19',
-    '#00ff66',
-    '#00ffb2',
-    '#00ffff',
-    '#00b3ff',
-    '#0066ff',
-    '#0019ff',
-    '#3300ff',
-    '#8000ff',
-    '#cc00ff',
-    '#ff00e5',
-    '#ff0099',
-    '#ff004c'])
+  t.deepEqual(a, [[255,0,0],[255,77,0],[255,153,0],[255,230,0],[204,255,0],[127,255,0],[51,255,0],[0,255,25],[0,255,102],[0,255,178],[0,255,255],[0,179,255],[0,102,255],[0,25,255],[51,0,255],[128,0,255],[204,0,255],[255,0,229],[255,0,153],[255,0,76]])
 })

@@ -1,12 +1,12 @@
 const NUM_SECTIONS = 6
 
 export const MAX_RGB = 255
-
+export type Color = [number, number, number]
 /**
  * Gets the rainbow color in RGB given a normalized index (0.0-1.0)
  * @returns [r, g, b]
  */
-export function getRGB(index: number) {
+export function getRGB(index: number): Color {
   const section = Math.floor(index * NUM_SECTIONS)
   const start = Math.round((index - (section / NUM_SECTIONS)) * NUM_SECTIONS * MAX_RGB) // index from start of section (0-1)
   const end = MAX_RGB - start // index from end of section (0-1)
