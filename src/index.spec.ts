@@ -14,6 +14,9 @@ test('catch negative input', t => {
   t.throws(() => createRainbow(-1))
 })
 
-test('create no rainbow for 0', t => {
-  t.deepEqual(createRainbow(0), [])
+test('rainbow need 9 shades', t => {
+  t.throws(() => createRainbow(0))
+
+  t.throws(() => createRainbow(8))
+  t.notThrows(() => createRainbow(9))
 })

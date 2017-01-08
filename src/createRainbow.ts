@@ -1,6 +1,6 @@
-import { createColorMap, RGB, Alpha } from 'color-map'
+import { createColorsFromMap, ColorMap, RGB, Alpha } from 'color-map'
 
-const rainbow: { index: number, rgb: RGB }[] = [
+const rainbow: ColorMap = [
   { index: 0, rgb: [150, 0, 90] },
   { index: 0.125, rgb: [0, 0, 200] },
   { index: 0.25, rgb: [0, 25, 255] },
@@ -14,25 +14,8 @@ const rainbow: { index: number, rgb: RGB }[] = [
 
 /**
  * Create rainbow of colors
- * @returns array of [r,g,b]
+ * @returns array of [r,g,b,a]
  */
 export function createRainbow(shades: number, alpha?: Alpha) {
-  if (shades < 0) {
-    throw new Error('Number of shades must be non-negative')
-  }
-
-  const result: RGB[] = []
-  const steps: number[] = []
-  for (let i = 0; i < rainbow.length; i++) {
-    steps.push(Math.round(rainbow[i].index * shades))
-  }
-
-  for (let i = 0; i < rainbow.length - 1; i++) {
-    const n = steps[i + 1] - steps[i]
-    const from: RGB = rainbow[i].rgb;
-    const to = rainbow[i + 1].rgb;
-    result.push(...createColorMap(from, to, n, alpha))
-  }
-
-  return result
+  return createColorsFromMap(rainbow, shades, alpha)
 }
