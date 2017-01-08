@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "inlineSources": true,
+    "inlineSources": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
