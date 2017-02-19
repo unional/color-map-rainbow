@@ -21,7 +21,7 @@
     "lint": "tslint \"src/**/*.ts\"",
     "postpublish": "git push",
     "preversion": "git pull && npm run verify",
-    "version": "npm run remove-spec && npm run bundle && git add -f dist/unional-color-map-rainbow*",
+    "version": "npm run remove-spec && npm run build-es2015 && npm run bundle && git add -f dist/color-map-rainbow*",
     "verify": "npm run lint && npm run coverage && npm run dependency-check",
     "coverage": "nyc --check-coverage --branches 85 --functions 85 --lines 85 npm test",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
