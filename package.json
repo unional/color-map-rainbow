@@ -2,38 +2,53 @@
   "name": "color-map-rainbow",
   "description": "Create rainbow of colors",
   "version": "2.1.0",
-  "main": "dist/commonjs/index.js",
-  "typings": "dist/commonjs/index.d.ts",
+  "main": "dist/es5/index.js",
+  "module": "dist/es2015/index.js",
+  "typings": "dist/es5/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build-commonjs",
-    "build-commonjs": "tsc -p tsconfig.commonjs.json",
-    "clean": "rimraf dist",
-    "coverage": "npm test && nyc check-coverage --branches 85 --functions 85 --lines 85",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "build": "npm run clean && npm run build-es5 && npm run build-es2015",
+    "build-es2015": "tsc -p tsconfig.es2015.json",
+    "build-es5": "tsc -p tsconfig.es5.json",
+    "bundle": "npm run bundle-es2015 && npm run bundle-es5",
+    "bundle-es2015": "rollup --config rollup.config.es2015.js",
+    "bundle-es5": "webpack --config webpack.config.es5.js",
+    "clean": "rimraf dist/es5 dist/es2015",
+    "dc": "npm run dependency-check",
     "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
     "lint": "tslint \"src/**/*.ts\"",
     "postpublish": "git push",
-    "prepare": "npm run build",
     "preversion": "git pull && npm run verify",
-    "test": "npm run clean && tsc && nyc ava",
-    "verify": "npm run lint && npm run coverage && npm run build && npm run dependency-check",
+    "version": "npm run remove-spec && npm run bundle && git add -f dist/unional-color-map-rainbow*",
+    "verify": "npm run lint && npm run coverage && npm run dependency-check",
+    "coverage": "nyc --check-coverage --branches 85 --functions 85 --lines 85 npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "remove-spec": "rimraf dist/es5/**/*.spec.*",
+    "test": "npm run clean && tsc && ava",
     "watch": "npm run clean && node scripts/watch.js"
   },
   "author": {
     "name": "Homa Wong",
     "email": "homawong@gmail.com"
   },
+  "homepage": "https://github.com/unional/color-map-rainbow",
+  "bugs": {
+    "url": "https://github.com/unional/color-map-rainbow/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unional/color-map-rainbow.git"
+  },
   "license": "MIT",
   "ava": {
     "files": [
-      "dist/spec/**/*.spec.js"
+      "dist/es5/**/*.spec.js"
     ],
     "source": [
       "scripts/*.js",
-      "dist/spec/**/*.js",
+      "dist/es5/**/*.js",
       "*.json"
     ],
     "require": [
@@ -51,22 +66,29 @@
   "devDependencies": {
     "ansi-styles": "github:chalk/ansi-styles",
     "aurelia-logging": "^1.2.0",
-    "aurelia-logging-console": "^1.0.0",
-    "aurelia-polyfills": "^1.1.1",
-    "ava": "^0.17.0",
-    "browser-env": "^2.0.19",
-    "colormap": "^2.2.0",
+    "aurelia-logging-color": "^0.5.1",
+    "ava": "^0.18.2",
     "core-js": "^2.4.1",
-    "dependency-check": "^2.7.0",
-    "eslint": "^3.13.0",
+    "dependency-check": "^2.8.0",
+    "eslint": "^3.15.0",
     "eslint-config-unional": "^0.2.3",
-    "nyc": "^10.0.0",
-    "rimraf": "^2.5.4",
-    "tslint": "^4.3.1",
+    "nyc": "^10.1.2",
+    "param-case": "^2.1.0",
+    "pascal-case": "^2.0.0",
+    "rimraf": "^2.6.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-builtins": "^2.0.0",
+    "rollup-plugin-node-globals": "^1.1.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.1",
+    "source-map-loader": "^0.1.6",
+    "tslint": "^4.4.2",
     "tslint-config-unional": "^0.6.0",
-    "typescript": "^2.1.4"
+    "typescript": "^2.1.6",
+    "webpack": "^2.2.0"
   },
   "dependencies": {
-    "color-map": "^0.4.0"
+    "color-map": "^0.5.8"
   }
 }
