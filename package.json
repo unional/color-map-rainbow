@@ -50,10 +50,6 @@
       "scripts/*.js",
       "dist/es5/**/*.js",
       "*.json"
-    ],
-    "require": [
-      "./scripts/setup-browser-env.js",
-      "./scripts/setup-test-env.js"
     ]
   },
   "nyc": {
@@ -65,8 +61,6 @@
   },
   "devDependencies": {
     "ansi-styles": "github:chalk/ansi-styles",
-    "aurelia-logging": "^1.2.0",
-    "aurelia-logging-color": "^0.5.1",
     "ava": "^0.18.2",
     "colormap": "^2.2.0",
     "core-js": "^2.4.1",
