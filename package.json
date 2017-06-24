@@ -65,7 +65,7 @@
     "colormap": "^2.2.0",
     "core-js": "^2.4.1",
     "dependency-check": "^2.8.0",
-    "eslint": "^3.15.0",
+    "eslint": "^4.0.0",
     "eslint-config-unional": "^0.2.3",
     "nyc": "^10.1.2",
     "param-case": "^2.1.0",
