@@ -2,12 +2,13 @@ import test from 'ava'
 import * as style from 'ansi-styles'
 import { createRainbow } from './index'
 
-test('create rainbow', _t => {
+test('create rainbow', t => {
   let actual = createRainbow(30)
   const rainbow = actual.reduce((v, c) => {
     return v + style.bgColor.ansi16m.rgb(...c) + ' ' + style.bgColor.close
   }, '')
   console.log(rainbow)
+  t.pass()
 })
 
 test('catch negative input', t => {

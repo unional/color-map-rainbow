@@ -18,7 +18,7 @@
     "clean": "rimraf dist/es5 dist/es2015",
     "dc": "npm run dependency-check",
     "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
-    "lint": "tslint \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json --type-check \"src/**/*.ts\"",
     "postpublish": "git push",
     "preversion": "git pull && npm run verify",
     "version": "npm run remove-spec && npm run build-es2015 && npm run bundle && git add -f dist/color-map-rainbow*",
