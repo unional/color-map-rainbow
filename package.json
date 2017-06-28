@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "ansi-styles": "github:chalk/ansi-styles",
-    "ava": "^0.18.2",
+    "ava": "^0.20.0",
     "colormap": "^2.2.0",
     "core-js": "^2.4.1",
     "dependency-check": "^2.8.0",
