@@ -1,5 +1,7 @@
 # color-map-rainbow
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/unional/color-map-rainbow.svg)](https://greenkeeper.io/)
+
 [![stable][stable-image]][stable-url]
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
