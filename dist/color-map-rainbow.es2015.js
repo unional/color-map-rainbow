@@ -1,7 +1,7 @@
-(function (exports) {
+var ColorMapRainbow = (function (exports) {
 'use strict';
 
-function createColors(from, to, shades, alpha) {
+function createColors(from, to, shades, alpha = [1, 1]) {
     const rgba = [];
     const start = [...from];
     const diff = [
@@ -9,18 +9,16 @@ function createColors(from, to, shades, alpha) {
         to[1] - from[1],
         to[2] - from[2]
     ];
-    if (alpha) {
-        start.push(alpha[0]);
-        diff.push(alpha[1] - alpha[0]);
-    }
+    start.push(alpha[0]);
+    diff.push(alpha[1] - alpha[0]);
+    const inc = 1 /
+        Math.max(shades - 1, 1);
     for (let i = 0; i < shades; i++) {
-        const inc = 1 /
-            Math.max(shades - 1, 1);
         const color = [
             Math.round(start[0] + i * diff[0] * inc),
             Math.round(start[1] + i * diff[1] * inc),
             Math.round(start[2] + i * diff[2] * inc),
-            alpha ? start[3] + i * diff[3] * inc : 1
+            start[3] + i * diff[3] * inc
         ];
         rgba.push(color);
     }
@@ -75,5 +73,7 @@ function createRainbow(shades, alpha) {
 exports.rainbow = rainbow;
 exports.createRainbow = createRainbow;
 
-}((this.ColorMapRainbow = this.ColorMapRainbow || {})));
+return exports;
+
+}({}));
 //# sourceMappingURL=color-map-rainbow.es2015.js.map

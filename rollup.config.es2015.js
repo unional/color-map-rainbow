@@ -11,36 +11,21 @@ const pkg = require('./package')
 const moduleName = pascalCase(pkg.name)
 
 export default {
-  dest: `dist/${paramCase(pkg.name)}.es2015.js`,
-  entry: 'dist/es2015/index.js',
-  external: [
-  ],
-  exports: 'named',
-  format: 'iife',
-  globals: {
+  input: 'dist/es2015/index.js',
+  output: {
+    file:`dist/${paramCase(pkg.name)}.es2015.js`,
+    format: 'iife',
+    name: moduleName,
+    exports: 'named',
+    sourcemap: true
   },
-  moduleId: pkg.name,
-  moduleName,
-  // This may comes handy
-  // onwarn(warning) {
-  //   // Suppress this error message: "The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten"
-  //   // https://github.com/rollup/rollup/issues/794
-  //   if (warning.code === 'THIS_IS_UNDEFINED') {
-  //     return
-  //   }
-
-  //   console.error(warning.message)
-  // },
   plugins: [
     sourcemaps(),
     nodeResolve({
-      jsnext: true,
-      skip: [
-      ]
+      jsnext: true
     }),
     nodeGlobals(),
     nodeBuiltins(),
     commonjs()
-  ],
-  sourceMap: true
+  ]
 }
