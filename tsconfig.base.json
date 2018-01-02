@@ -18,5 +18,8 @@
     "removeComments": false,
     "sourceMap": true,
     "strictNullChecks": true
-  }
+  },
+  "files": [
+    "src/index.ts"
+  ]
 }

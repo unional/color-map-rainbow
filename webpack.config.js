@@ -10,19 +10,24 @@ const globalVariable = pascalCase(filename)
 
 module.exports = {
   devtool: 'source-map',
-  entry: {
-    [filename]: './dist/es5/index'
-  },
+  entry: './src/index',
   externals: {
+    'color-map': 'ColorMap'
   },
   module: {
     rules: [
       {
-        enforce: 'pre',
-        loader: "source-map-loader",
-        test: /\.js?$/
+        loader: 'ts-loader',
+        test: /\.tsx?$/,
+        options: {
+          configFile: 'tsconfig.es5.json',
+          transpileOnly: true
+        }
       }
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -31,7 +36,7 @@ module.exports = {
     libraryTarget: 'var',
     devtoolModuleFilenameTemplate: (info) => {
       if (info.identifier.lastIndexOf('.ts') === info.identifier.length - 3) {
-        return `webpack:///${pjson.name}/${info.resource.slice(9)}`
+        return `webpack:///${pjson.name}/${info.resource.slice(6)}`
       }
       else {
         return `webpack:///${info.resourcePath}`
