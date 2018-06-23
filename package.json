@@ -61,7 +61,7 @@
     "ansi-styles": "github:chalk/ansi-styles",
     "ava": "^0.25.0",
     "dependency-check": "^3.0.0",
-    "eslint": "^4.14.0",
+    "eslint": "^5.0.0",
     "eslint-config-unional": "^0.3.0",
     "nyc": "^11.4.1",
     "param-case": "^2.1.1",
