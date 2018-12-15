@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "ansi-styles": "github:chalk/ansi-styles",
-    "ava": "^0.25.0",
+    "ava": "^1.0.1",
     "dependency-check": "^3.0.0",
     "eslint": "^5.0.0",
     "eslint-config-unional": "^0.3.0",
