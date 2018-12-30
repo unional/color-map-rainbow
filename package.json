@@ -44,7 +44,7 @@
     "files": [
       "dist-es5/**/*.spec.js"
     ],
-    "source": [
+    "sources": [
       "scripts/*.js",
       "dist-es5/**/*.js",
       "*.json"
@@ -59,28 +59,28 @@
   },
   "devDependencies": {
     "ansi-styles": "github:chalk/ansi-styles",
-    "ava": "^0.25.0",
-    "dependency-check": "^3.0.0",
-    "eslint": "^4.14.0",
-    "eslint-config-unional": "^0.3.0",
-    "nyc": "^11.4.1",
+    "ava": "^1.0.1",
+    "dependency-check": "^3.3.0",
+    "eslint": "^5.11.1",
+    "eslint-plugin-harmony": "^1.0.4",
+    "nyc": "^13.1.0",
     "param-case": "^2.1.1",
     "pascal-case": "^2.0.1",
     "rimraf": "^2.6.2",
-    "rollup": "^0.57.0",
-    "rollup-plugin-commonjs": "^9.0.0",
+    "rollup": "^1.0.0",
+    "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-globals": "^1.1.0",
-    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
-    "semantic-release": "^15.0.3",
-    "ts-loader": "^3.2.0",
-    "tslint": "^5.8.0",
-    "tslint-config-unional": "^0.9.0",
-    "typescript": "^2.6.2",
-    "webpack": "^4.0.0"
+    "semantic-release": "^15.13.2",
+    "ts-loader": "^5.3.2",
+    "tslint": "^5.12.0",
+    "tslint-config-unional": "^0.10.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.3"
   },
   "dependencies": {
-    "color-map": "^1.0.0"
+    "color-map": "^1.1.0"
   }
 }
