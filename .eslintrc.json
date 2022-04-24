@@ -1,14 +1,24 @@
 {
-  "extends": "plugin:harmony/latest",
-  "root": true,
   "env": {
-    "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true,
+    "node": true
   },
-  "rules": {
-    "func-names": 0,
-    "no-console": [
-      0
-    ]
-  }
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": "plugin:harmony/latest",
+  "overrides": [
+    {
+      "extends": "plugin:harmony/ts-recommended-type-check",
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "parserOptions": {
+        "project": "tsconfig.json"
+      }
+    }
+  ],
+  "root": true
 }
