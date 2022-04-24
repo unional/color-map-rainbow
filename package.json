@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "build": "npm-run-all -p build-es5 build-es2015 -s bundle",
+    "build:doc": "typedoc",
     "build-es2015": "tsc -p tsconfig.es2015.json",
     "build-es5": "tsc -p tsconfig.es5.json",
     "bundle": "run-p bundle-es2015 bundle-es5",
