@@ -7,5 +7,13 @@
   "compileOnSave": false,
   "include": [
     "ts"
-  ]
+  ],
+  "typedocOptions": {
+    "customTitle": "Create rainbow of colors",
+    "customTitleLink": "https://github.com/unional/events-plus",
+    "entryPoints": [
+      "ts/index.ts"
+    ],
+    "out": "docs"
+  }
 }

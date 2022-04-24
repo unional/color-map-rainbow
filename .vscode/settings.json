@@ -3,6 +3,7 @@
     "iife",
     "jsnext",
     "pjson",
+    "rgba",
     "rollup"
   ],
   "eslint.enable": true,

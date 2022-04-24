@@ -1,0 +1,8 @@
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qcolor-map-rainbow\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q![GitHub NodeJS][github-nodejs] ![Codecov][codecov-image]\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q[NPM version]npm-url [NPM downloads]downloads-url badge-size-es5-url badge-size-es2015-url\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q![Visual Studio Code][vscode-image]\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q[NPM version]npm-url [NPM downloads]downloads-url badge-size-es5-url badge-size-es2015-url [stable]stable-url\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q[GitHub NodeJS]github-action-url [Codecov]codecov-url\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q[Semantic Release]semantic-release-url\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q[Visual Studio Code]vscode-url\\E$"}
