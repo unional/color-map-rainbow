@@ -43,7 +43,8 @@ node_modules
 
 # project folders
 cjs
-dist
+dist-es2015
+dist-es5
 docs
 esm
 lib
