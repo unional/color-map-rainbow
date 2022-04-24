@@ -54,7 +54,7 @@
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "ansi-styles": "5",
+    "ansi-styles": "6",
     "depcheck": "^1.4.3",
     "eslint": "^8.14.0",
     "eslint-plugin-harmony": "^6.0.2",
