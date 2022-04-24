@@ -3,4 +3,5 @@ ignores:
   - "@size-limit/*"
   - "@types/jest"
   - rollup*
+  - typedoc*
   - webpack-cli
