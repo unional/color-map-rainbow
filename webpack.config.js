@@ -9,8 +9,9 @@ const filename = paramCase(pjson.name)
 const globalVariable = pascalCase(filename)
 
 module.exports = {
+  mode: 'production',
   devtool: 'source-map',
-  entry: './src/index',
+  entry: './ts/index',
   externals: {
     'color-map': 'ColorMap'
   },

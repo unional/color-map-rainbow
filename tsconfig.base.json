@@ -1,25 +1,27 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "declarationMap": true,
     "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
     "inlineSources": true,
     "lib": [
       "dom",
       "es2015",
       "es2015.reflect"
     ],
-    "module": "commonjs",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "newLine": "LF",
-    "noImplicitAny": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": false,
     "sourceMap": true,
-    "strictNullChecks": true
+    "strict": true
   },
   "files": [
-    "src/index.ts"
+    "ts/index.ts"
   ]
 }

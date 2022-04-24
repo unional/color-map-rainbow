@@ -1,4 +1,24 @@
 {
+  "cSpell.words": [
+    "iife",
+    "jsnext",
+    "pjson",
+    "rollup"
+  ],
+  "eslint.enable": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.hg/store/**": true,
+    "**/.progress/**": true,
+    "**/node_modules/*/**": true,
+    ".github": true,
+    "cjs": true,
+    "coverage": true,
+    "esm": true,
+    "lib": true,
+    "scripts": true
+  },
   "json.schemas": [
     {
       "fileMatch": [
