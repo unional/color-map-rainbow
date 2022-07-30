@@ -75,7 +75,7 @@
     "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-node-resolve": "^5.0.0",
     "rollup-plugin-sourcemaps": "^0.6.0",
-    "size-limit": "^7.0.8",
+    "size-limit": "^8.0.0",
     "ts-loader": "^9.0.0",
     "typedoc": "^0.23.0",
     "typedoc-plugin-extras": "^2.2.3",
