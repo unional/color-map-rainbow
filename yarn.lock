@@ -4938,6 +4938,11 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
+no-case@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/no-case/-/no-case-4.0.0.tgz#d728c0ca7e7a5475e392738d94113c29509e5232"
+  integrity sha512-WmS3EUGw+vXHlTgiUPi3NzbZNwH6+uGX0QLGgqG+aFSJ5rkX/Ee0nuwHBJfZTfQwwR8lGO819NEIwQ7CGhkdEQ==
+
 node-int64@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
@@ -5090,12 +5095,12 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
-param-case@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/param-case/-/param-case-2.1.1.tgz#df94fd8cf6531ecf75e6bef9a0858fbc72be2247"
-  integrity sha1-35T9jPZTHs915r75oIWPvHK+Ikc=
+param-case@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/param-case/-/param-case-4.0.0.tgz#c09da4657040b6e5bd72adfccbb7833a917fd934"
+  integrity sha512-+kVIBemYVaPPzBX6Z9FcBvaY0YSIBxD1fyShn6P3HkWOIbsOkT8OmEgLrQSaAHRDyYKdu7YH5RRiACiJLSJ2pw==
   dependencies:
-    no-case "^2.2.0"
+    no-case "^4.0.0"
 
 parent-module@^1.0.0:
   version "1.0.1"
