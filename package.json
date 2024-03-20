@@ -52,7 +52,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@commitlint/cli": "^19.0.0",
     "@commitlint/config-conventional": "^19.0.0",
-    "@size-limit/preset-small-lib": "^9.0.0",
+    "@size-limit/preset-small-lib": "^11.0.0",
     "@types/jest": "^28.0.0",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "ansi-styles": "5",
