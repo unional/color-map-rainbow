@@ -49,3 +49,6 @@ docs
 esm
 lib
 out
+
+# publish gate
+publish-gate-report.md

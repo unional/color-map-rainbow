@@ -5,3 +5,4 @@ ignores:
   - rollup*
   - typedoc*
   - webpack-cli
+  - rimraf
