@@ -9,8 +9,8 @@
     "ts"
   ],
   "typedocOptions": {
-    "customTitle": "Create rainbow of colors",
-    "customTitleLink": "https://github.com/unional/events-plus",
+    "name": "Create rainbow of colors",
+    "titleLink": "https://github.com/cyberuni/color-map-rainbow",
     "entryPoints": [
       "ts/index.ts"
     ],
