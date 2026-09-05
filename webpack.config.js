@@ -1,11 +1,14 @@
 'use strict';
-const paramCase = require('param-case')
 const pascalCase = require('pascal-case')
 const path = require('path')
 
 const pjson = require('./package.json')
 
-const filename = paramCase(pjson.name)
+// `pjson.name` is already kebab-case, so the previous `paramCase(pjson.name)` was a
+// no-op. param-case v4 is ESM-only and drops its default export, so it cannot be
+// `require`d from this CommonJS config at all - dropping it is simpler than porting
+// two build configs to ESM for a transform that changes nothing.
+const filename = pjson.name
 const globalVariable = pascalCase(filename)
 
 module.exports = {
