@@ -27,8 +27,9 @@ jobs:
       contents: write
       pull-requests: write
 
-  docgen:
-    uses: cyberuni/.github/.github/workflows/pnpm-docs.yml@v2
-    needs: release
-    permissions:
-      contents: write
+  # No docgen job. typedoc reaches into the TypeScript compiler's internal
+  # SyntaxKind, which the TypeScript 7 native port does not expose the same way,
+  # so typedoc 0.28 crashes on load against it. The public API is two exports and
+  # the README documents both. cyberuni/color-map runs no docgen either.
+  #
+  # The existing gh-pages site stays up, frozen at its last build.
