@@ -76,8 +76,8 @@ importers:
         specifier: ^6.0.0
         version: 6.2.6
       param-case:
-        specifier: ^2.1.1
-        version: 2.1.1
+        specifier: ^4.0.0
+        version: 4.0.0
       pascal-case:
         specifier: ^2.0.1
         version: 2.0.1
@@ -3053,6 +3053,10 @@ packages:
   no-case@2.3.2:
     resolution: {integrity: sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==}
 
+  no-case@4.0.0:
+    resolution: {integrity: sha512-WmS3EUGw+vXHlTgiUPi3NzbZNwH6+uGX0QLGgqG+aFSJ5rkX/Ee0nuwHBJfZTfQwwR8lGO819NEIwQ7CGhkdEQ==}
+    deprecated: Use `change-case`
+
   node-int64@0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
 
@@ -3132,8 +3136,9 @@ packages:
   package-manager-detector@1.8.0:
     resolution: {integrity: sha512-yQA4H19AmPEoMUeavPMDIe1higySl/gH/yaQrkT/s07Qp+7pp2hYz30N3z2l5BkjVkF9Ow6o0wjJamm2y7Sn0A==}
 
-  param-case@2.1.1:
-    resolution: {integrity: sha512-eQE845L6ot89sk2N8liD8HAuH4ca6Vvr7VWAWwt7+kvvG5aBcPmmphQ68JsEG2qa9n1TykS2DLeMt363AAH8/w==}
+  param-case@4.0.0:
+    resolution: {integrity: sha512-+kVIBemYVaPPzBX6Z9FcBvaY0YSIBxD1fyShn6P3HkWOIbsOkT8OmEgLrQSaAHRDyYKdu7YH5RRiACiJLSJ2pw==}
+    deprecated: Use `change-case`
 
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
@@ -7500,6 +7505,8 @@ snapshots:
     dependencies:
       lower-case: 1.1.4
 
+  no-case@4.0.0: {}
+
   node-int64@0.4.0: {}
 
   node-releases@2.0.54: {}
@@ -7580,9 +7587,9 @@ snapshots:
 
   package-manager-detector@1.8.0: {}
 
-  param-case@2.1.1:
+  param-case@4.0.0:
     dependencies:
-      no-case: 2.3.2
+      no-case: 4.0.0
 
   parent-module@1.0.1:
     dependencies:
