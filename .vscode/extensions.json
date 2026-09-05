@@ -1,9 +1,9 @@
 {
-  "recommendations": [
-    "aaron-bond.better-comments",
-    "editorconfig.editorconfig",
-    "dbaeumer.vscode-eslint",
-    "yzhang.markdown-all-in-one",
-    "DavidAnson.vscode-markdownlint"
-  ]
+	"recommendations": [
+		"aaron-bond.better-comments",
+		"editorconfig.editorconfig",
+		"biomejs.biome",
+		"yzhang.markdown-all-in-one",
+		"DavidAnson.vscode-markdownlint"
+	]
 }

@@ -18,6 +18,7 @@ lib-cov
 coverage
 .nyc_output
 .progress
+.reports
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
@@ -41,14 +42,14 @@ node_modules
 # webstorm
 .idea
 
-# project folders
-cjs
-dist-es2015
-dist-es5
-docs
-esm
-lib
-out
+# build output — unanchored so the patterns match at any depth, not just the
+# repo root. `dist/` used to be committed; tsdown regenerates it on every build.
+cjs/
+dist/
+docs/
+esm/
+lib/
+out/
 
 # publish gate
 publish-gate-report.md

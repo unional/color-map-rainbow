@@ -1,95 +1,78 @@
 {
-  "name": "color-map-rainbow",
-  "version": "2.1.5",
-  "description": "Create rainbow of colors",
-  "homepage": "https://github.com/cyberuni/color-map-rainbow",
-  "bugs": {
-    "url": "https://github.com/cyberuni/color-map-rainbow/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cyberuni/color-map-rainbow.git"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Homa Wong",
-    "email": "homawong@gmail.com"
-  },
-  "main": "dist-es5/index.js",
-  "module": "dist-es2015/index.js",
-  "typings": "dist-es5/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "npm-run-all -p build-es5 build-es2015 -s bundle",
-    "build-es2015": "tsc -p tsconfig.es2015.json",
-    "build-es5": "tsc -p tsconfig.es5.json",
-    "build:doc": "typedoc",
-    "bundle": "run-p bundle-es2015 bundle-es5",
-    "bundle-es2015": "rollup --config rollup.config.js",
-    "bundle-es5": "webpack",
-    "clean": "rimraf dist-es5 dist-es2015 coverage",
-    "coverage": "jest --coverage",
-    "cs": "changeset",
-    "depcheck": "depcheck",
-    "lint": "eslint --ext=ts,js .",
-    "nuke": "pnpm clean && rimraf node_modules",
-    "prepare": "husky install",
-    "release": "changeset publish",
-    "size-limit": "size-limit",
-    "test": "jest",
-    "test:types": "tsc",
-    "verify": "run-p verify:build lint test:types coverage",
-    "verify:build": "npm-run-all clean build -p depcheck size-limit",
-    "version": "changeset version",
-    "watch": "jest --watch"
-  },
-  "dependencies": {
-    "color-map": "^1.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
-    "@changesets/cli": "^3.0.0",
-    "@commitlint/cli": "^19.0.0",
-    "@commitlint/config-conventional": "^19.0.0",
-    "@size-limit/preset-small-lib": "^9.0.0",
-    "@types/jest": "^28.0.0",
-    "@types/node": "^20.19.43",
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "ansi-styles": "5",
-    "depcheck": "^1.4.3",
-    "eslint": "^8.14.0",
-    "eslint-plugin-harmony": "^7.0.2",
-    "husky": "^8.0.0",
-    "jest": "^28.0.0",
-    "jest-validate": "^28.0.0",
-    "jest-watch-suspend": "^1.1.2",
-    "jest-watch-toggle-config": "^2.0.1",
-    "jest-watch-typeahead": "^2.0.0",
-    "npm-run-all2": "^6.0.0",
-    "param-case": "^2.1.1",
-    "pascal-case": "^2.0.1",
-    "rimraf": "^5.0.0",
-    "rollup": "^2.4.0",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-globals": "^1.4.0",
-    "rollup-plugin-node-resolve": "^5.0.0",
-    "rollup-plugin-sourcemaps": "^0.6.0",
-    "size-limit": "^8.0.0",
-    "ts-loader": "^9.0.0",
-    "typedoc": "^0.25.0",
-    "typescript": "^4.6.3",
-    "webpack": "^5.0.0",
-    "webpack-cli": "^5.0.0"
-  },
-  "size-limit": [
-    {
-      "limit": "2 kb"
-    }
-  ],
-  "packageManager": "pnpm@11.24.0"
+	"name": "color-map-rainbow",
+	"version": "2.1.5",
+	"description": "Create rainbow of colors",
+	"homepage": "https://github.com/cyberuni/color-map-rainbow",
+	"bugs": {
+		"url": "https://github.com/cyberuni/color-map-rainbow/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cyberuni/color-map-rainbow.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Homa Wong (unional)",
+		"email": "homawong@gmail.com"
+	},
+	"type": "module",
+	"exports": {
+		"types": "./esm/index.d.ts",
+		"import": "./esm/index.js",
+		"require": "./cjs/index.js",
+		"default": "./cjs/index.js"
+	},
+	"main": "./cjs/index.js",
+	"types": "./esm/index.d.ts",
+	"files": [
+		"cjs",
+		"dist",
+		"esm",
+		"ts",
+		"!**/*.spec.*"
+	],
+	"scripts": {
+		"build": "tsdown",
+		"build:watch": "tsdown --watch",
+		"check": "biome check",
+		"check:fix": "biome check --fix",
+		"clean": "rimraf .reports cjs coverage dist esm",
+		"coverage": "vitest run --coverage",
+		"cs": "changeset",
+		"depcheck": "depcheck",
+		"format": "biome format . --write",
+		"lint": "biome lint .",
+		"nuke": "pnpm clean && rimraf node_modules",
+		"prepare": "husky",
+		"release": "changeset publish",
+		"test": "vitest run",
+		"typecheck": "tsc",
+		"verify": "run-p lint build depcheck typecheck coverage",
+		"version": "changeset version",
+		"watch": "vitest"
+	},
+	"dependencies": {
+		"color-map": "^2.2.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.7",
+		"@changesets/cli": "^3.0.0",
+		"@commitlint/cli": "^21.2.1",
+		"@commitlint/config-conventional": "^21.2.0",
+		"@repobuddy/biome": "^2.3.1",
+		"@types/node": "^26.2.0",
+		"@vitest/coverage-v8": "^4.1.10",
+		"ansi-styles": "^6.2.1",
+		"depcheck": "^1.4.3",
+		"husky": "^9.1.7",
+		"npm-run-all2": "^9.0.3",
+		"rimraf": "^6.1.3",
+		"tsdown": "^0.22.14",
+		"typescript": "^7.0.2",
+		"vitest": "^4.1.10"
+	},
+	"packageManager": "pnpm@11.24.0",
+	"engines": {
+		"node": ">= 20"
+	}
 }

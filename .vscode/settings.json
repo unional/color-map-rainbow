@@ -1,33 +1,18 @@
 {
-  "cSpell.words": [
-    "iife",
-    "jsnext",
-    "pjson",
-    "rgba",
-    "rollup",
-    "snyk"
-  ],
-  "eslint.enable": true,
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/.hg/store/**": true,
-    "**/.progress/**": true,
-    "**/node_modules/*/**": true,
-    ".github": true,
-    "cjs": true,
-    "coverage": true,
-    "esm": true,
-    "lib": true,
-    "scripts": true
-  },
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "tsconfig.*.json"
-      ],
-      "url": "http://json.schemastore.org/tsconfig"
-    }
-  ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+	"cSpell.words": ["iife", "rgba", "tsdown"],
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true,
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/.hg/store/**": true,
+		"**/.progress/**": true,
+		"**/node_modules/*/**": true,
+		".github": true,
+		"cjs": true,
+		"coverage": true,
+		"dist": true,
+		"esm": true
+	},
+	"typescript.tsdk": "node_modules/typescript/lib"
 }
