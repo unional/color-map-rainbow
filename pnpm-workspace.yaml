@@ -1,21 +1,17 @@
+# pnpm blocks postinstall scripts unless a package is listed here. These are all
+# native-binary installers pulled in transitively; without this they are silently
+# skipped and fail later at build time rather than at install.
 allowBuilds:
+  '@biomejs/biome': true
   esbuild: true
 
-# Supply-chain soak: no dependency may be installed until it has been on the registry
-# for 24h. This is the control that stops a compromised release from being pulled into
-# a build within hours of publication.
+# Supply-chain soak: refuse packages published less than 24h ago, so a compromised
+# release has a window to be caught and unpublished before it reaches a build.
 #
-# It must live here. In `.npmrc`, `minimumreleaseage` is not a valid key - it never
-# reaches pnpm's typed config and the soak is silently inert.
-#
-# `minimumReleaseAgeStrict` is required for it to mean anything. Without it pnpm runs
-# LOOSE: a too-young package is not rejected, it is appended to
-# `minimumReleaseAgeExclude` and installed anyway, so the soak excuses itself on every
-# install and the waiver list grows on its own. Strict turns that into a hard
-# ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION.
-#
-# There is deliberately no exclusion list. If an install trips the gate, prefer waiting
-# it out or pinning an older mature version; an exclusion is a dated exception that
-# should carry its reason and the date it becomes removable.
-minimumReleaseAge: 1440 # 1 day
+# This must live here, not in .npmrc. pnpm only auto-enables STRICT soak mode when
+# the setting comes from pnpm-workspace.yaml / config.yaml / CLI / env; a value in
+# .npmrc runs in LOOSE mode, where a too-young package is silently appended to
+# minimumReleaseAgeExclude and installed anyway. minimumReleaseAgeStrict is set
+# explicitly so the enforcement does not depend on that inference.
+minimumReleaseAge: 1440
 minimumReleaseAgeStrict: true

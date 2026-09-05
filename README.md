@@ -39,43 +39,41 @@ const rgbaRainbow = rainbow.map(c => rgbaString(c))
 
 ```sh
 # right after clone
-npm install
+pnpm install
 
 # begin making changes
 git checkout -b <branch>
-npm run watch
+pnpm watch
 
-# edit `webpack.config.es5.js` and `rollup.config.es2015.js` to exclude dependencies for the bundle if needed
+# edit `tsdown.config.ts` to change what the bundles include
 
-# after making change(s)
+# describe the change for the changelog, if it affects the published package
+pnpm cs
+
 git commit -m "<commit message>"
 git push
 
 # create PR
 ```
 
-## NPM Commands
-
-There are a few useful commands you can use during development.
+## PNPM Commands
 
 ```sh
-# Run tests (and lint) automatically whenever you save a file.
-npm run watch
+# Run the tests in watch mode.
+pnpm watch
 
-# Run tests with coverage stats (but won't fail you if coverage does not meet criteria)
-npm run test
+# Run the tests once.
+pnpm test
 
-# Manually verify the project.
-# This will be ran during 'npm preversion' so you normally don't need to run this yourself.
-npm run verify
+# Run everything CI runs: lint, build, depcheck, typecheck, coverage.
+pnpm verify
 
-# Build the project.
-# You normally don't need to do this.
-npm run build
+# Build the package.
+pnpm build
 
-# Run tslint
-# You normally don't need to do this as `npm run watch` and `npm version` will automatically run lint for you.
-npm run lint
+# Lint and format.
+pnpm check
+pnpm check:fix
 ```
 
 [`color-rainbow`]: https://github.com/grant/color-rainbow

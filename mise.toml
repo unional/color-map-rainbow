@@ -1,0 +1,9 @@
+# The local toolchain, pinned. `mise install` gets you the node and pnpm this
+# repo is developed against.
+#
+# CI does NOT read this file — it selects its own node through setup-node, on
+# `lts/*` and `lts/-1`. Keep `pnpm` here in step with `packageManager` in
+# package.json; corepack reads that one.
+[tools]
+node = "24"
+pnpm = "11.24.0"
