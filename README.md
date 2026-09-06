@@ -89,7 +89,7 @@ pnpm check:fix
 [github-action-url]: https://github.com/cyberuni/color-map-rainbow/actions
 [npm-image]: https://img.shields.io/npm/v/color-map-rainbow.svg?style=flat
 [npm-url]: https://npmjs.org/package/color-map-rainbow
-[stable-image]: http://badges.github.io/stability-badges/dist/stable.svg
-[stable-url]: http://github.com/badges/stability-badges
+[stable-image]: https://badges.github.io/stability-badges/dist/stable.svg
+[stable-url]: https://github.com/badges/stability-badges
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]: https://code.visualstudio.com/
